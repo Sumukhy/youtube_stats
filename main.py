@@ -2,6 +2,7 @@ import requests
 import json
 from playsound import playsound
 import time
+import os
 
 channelID = "UCfL6BmHxOSMIedRmHe1gobA"
 
@@ -23,7 +24,8 @@ oldSubscriberCount=getSubscriberCount()
 print(oldSubscriberCount)
 
 def playSound():
-    playsound('beep.mp3')
+    #playsound('beep.mp3')
+    os.system('mpg123 -q beep.mp3')
 
     
 while True:
